@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D3A8499A1BBEFD3700FABFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849991BBEFD3700FABFCF /* AppDelegate.swift */; };
-		D3A8499C1BBEFD3700FABFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A8499B1BBEFD3700FABFCF /* ViewController.swift */; };
 		D3A8499F1BBEFD3700FABFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A8499D1BBEFD3700FABFCF /* Main.storyboard */; };
 		D3A849A11BBEFD3700FABFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A849A01BBEFD3700FABFCF /* Assets.xcassets */; };
 		D3A849A41BBEFD3700FABFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A849A21BBEFD3700FABFCF /* LaunchScreen.storyboard */; };
 		D3A849AF1BBEFD3700FABFCF /* ShowMessagesDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849AE1BBEFD3700FABFCF /* ShowMessagesDateTests.swift */; };
 		D3A849BA1BBEFD3700FABFCF /* ShowMessagesDateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849B91BBEFD3700FABFCF /* ShowMessagesDateUITests.swift */; };
+		D3A849CA1BBF004800FABFCF /* ShowMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849C91BBF004800FABFCF /* ShowMessagesViewController.swift */; };
+		D3A849CC1BBF004800FABFCF /* MessagesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849CB1BBF004800FABFCF /* MessagesLabel.swift */; };
+		D3A849CE1BBF022500FABFCF /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849CD1BBF022500FABFCF /* MessageTableViewCell.swift */; };
+		D3CD96961BFF7CAE00A932E7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD96951BFF7CAE00A932E7 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		D3A849961BBEFD3700FABFCF /* ShowMessagesDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMessagesDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A849991BBEFD3700FABFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3A8499B1BBEFD3700FABFCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3A8499E1BBEFD3700FABFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3A849A01BBEFD3700FABFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3A849A31BBEFD3700FABFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		D3A849B51BBEFD3700FABFCF /* ShowMessagesDateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowMessagesDateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A849B91BBEFD3700FABFCF /* ShowMessagesDateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMessagesDateUITests.swift; sourceTree = "<group>"; };
 		D3A849BB1BBEFD3700FABFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A849C91BBF004800FABFCF /* ShowMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMessagesViewController.swift; sourceTree = "<group>"; };
+		D3A849CB1BBF004800FABFCF /* MessagesLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLabel.swift; sourceTree = "<group>"; };
+		D3A849CD1BBF022500FABFCF /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		D3CD96951BFF7CAE00A932E7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				D3A849991BBEFD3700FABFCF /* AppDelegate.swift */,
-				D3A8499B1BBEFD3700FABFCF /* ViewController.swift */,
-				D3A8499D1BBEFD3700FABFCF /* Main.storyboard */,
+				D3CD96941BFF7C9600A932E7 /* Models */,
+				D3A849C71BBEFFF900FABFCF /* Views */,
+				D3A849C81BBF000100FABFCF /* Controllers */,
 				D3A849A01BBEFD3700FABFCF /* Assets.xcassets */,
 				D3A849A21BBEFD3700FABFCF /* LaunchScreen.storyboard */,
 				D3A849A51BBEFD3700FABFCF /* Info.plist */,
@@ -123,6 +130,32 @@
 				D3A849BB1BBEFD3700FABFCF /* Info.plist */,
 			);
 			path = ShowMessagesDateUITests;
+			sourceTree = "<group>";
+		};
+		D3A849C71BBEFFF900FABFCF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3A849CB1BBF004800FABFCF /* MessagesLabel.swift */,
+				D3A849CD1BBF022500FABFCF /* MessageTableViewCell.swift */,
+				D3A8499D1BBEFD3700FABFCF /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D3A849C81BBF000100FABFCF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A849C91BBF004800FABFCF /* ShowMessagesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D3CD96941BFF7C9600A932E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3CD96951BFF7CAE00A932E7 /* Message.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A8499C1BBEFD3700FABFCF /* ViewController.swift in Sources */,
+				D3A849CC1BBF004800FABFCF /* MessagesLabel.swift in Sources */,
+				D3A849CE1BBF022500FABFCF /* MessageTableViewCell.swift in Sources */,
+				D3CD96961BFF7CAE00A932E7 /* Message.swift in Sources */,
 				D3A8499A1BBEFD3700FABFCF /* AppDelegate.swift in Sources */,
+				D3A849CA1BBF004800FABFCF /* ShowMessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShowMessagesDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ayman.ShowMessagesDate;
@@ -407,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShowMessagesDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ayman.ShowMessagesDate;
@@ -481,6 +519,7 @@
 				D3A849C01BBEFD3700FABFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3A849C11BBEFD3700FABFCF /* Build configuration list for PBXNativeTarget "ShowMessagesDateTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +528,7 @@
 				D3A849C31BBEFD3700FABFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3A849C41BBEFD3700FABFCF /* Build configuration list for PBXNativeTarget "ShowMessagesDateUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +537,7 @@
 				D3A849C61BBEFD3700FABFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
