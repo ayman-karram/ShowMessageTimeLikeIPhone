@@ -17,6 +17,8 @@
 		D3A849CC1BBF004800FABFCF /* MessagesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849CB1BBF004800FABFCF /* MessagesLabel.swift */; };
 		D3A849CE1BBF022500FABFCF /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A849CD1BBF022500FABFCF /* MessageTableViewCell.swift */; };
 		D3CD96961BFF7CAE00A932E7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD96951BFF7CAE00A932E7 /* Message.swift */; };
+		D3CD969A1C00D0C400A932E7 /* IMG_3234.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3CD96981C00D0C400A932E7 /* IMG_3234.jpg */; };
+		D3CD969B1C00D0C400A932E7 /* IMG_3235.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3CD96991C00D0C400A932E7 /* IMG_3235.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D3A849CB1BBF004800FABFCF /* MessagesLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLabel.swift; sourceTree = "<group>"; };
 		D3A849CD1BBF022500FABFCF /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		D3CD96951BFF7CAE00A932E7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D3CD96981C00D0C400A932E7 /* IMG_3234.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3234.jpg; sourceTree = "<group>"; };
+		D3CD96991C00D0C400A932E7 /* IMG_3235.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3235.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				D3CD96941BFF7C9600A932E7 /* Models */,
 				D3A849C71BBEFFF900FABFCF /* Views */,
 				D3A849C81BBF000100FABFCF /* Controllers */,
+				D3CD96971C00CF0D00A932E7 /* screenshots */,
 				D3A849A01BBEFD3700FABFCF /* Assets.xcassets */,
 				D3A849A21BBEFD3700FABFCF /* LaunchScreen.storyboard */,
 				D3A849A51BBEFD3700FABFCF /* Info.plist */,
@@ -156,6 +161,15 @@
 				D3CD96951BFF7CAE00A932E7 /* Message.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D3CD96971C00CF0D00A932E7 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				D3CD96981C00D0C400A932E7 /* IMG_3234.jpg */,
+				D3CD96991C00D0C400A932E7 /* IMG_3235.jpg */,
+			);
+			name = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CD969B1C00D0C400A932E7 /* IMG_3235.jpg in Resources */,
 				D3A849A41BBEFD3700FABFCF /* LaunchScreen.storyboard in Resources */,
 				D3A849A11BBEFD3700FABFCF /* Assets.xcassets in Resources */,
 				D3A8499F1BBEFD3700FABFCF /* Main.storyboard in Resources */,
+				D3CD969A1C00D0C400A932E7 /* IMG_3234.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
