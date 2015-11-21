@@ -22,10 +22,6 @@ class Message: NSObject {
   var time :String!
   var messageType :MessageType!
   
-  override init() {
-    content = ""
-    time = ""
-  }
   
   init(messageContent : String , messageDate : String , type : MessageType) {
     content = messageContent

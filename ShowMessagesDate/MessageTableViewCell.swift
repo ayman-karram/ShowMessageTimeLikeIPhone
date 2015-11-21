@@ -16,18 +16,24 @@ class MessageTableViewCell: UITableViewCell {
   @IBOutlet var messageTimeLabel: UILabel!
   @IBOutlet var messageTimeTrailingConstraint: NSLayoutConstraint!
   
-  var messageType : MessageType?
-  
+  var timeShown = false
+
   //MARK: Helper Methods
   func setCell (messageObject : Message) {
-    guard let messageT = messageType else {
+    guard let messageT = messageObject.messageType else {
       return
     }
     switch messageT {
     case .Recived :
-      messageContentLabel.backgroundColor = UIColor.grayColor()
+      messageContentLabel.textColor = UIColor.whiteColor()
+      if !timeShown{
+        messageTimeTrailingConstraint.constant = -messageTimeLabel.bounds.width
+      }
     default :
-      messageContentLabel.backgroundColor = UIColor.blueColor()
+      messageContentLabel.textColor = UIColor.blackColor()
+      if !timeShown{
+        messageTimeTrailingConstraint.constant = -messageTimeLabel.bounds.width
+      }
     }
     messageContentLabel.text = messageObject.content
     messageTimeLabel.text = messageObject.time

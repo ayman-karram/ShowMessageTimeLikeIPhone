@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="232" y="315"/>
         </scene>
-        <!--Send Messages View Controller-->
+        <!--Joeny-->
         <scene sceneID="HNp-3y-6wX">
             <objects>
-                <viewController storyboardIdentifier="SendMessagesViewController" automaticallyAdjustsScrollViewInsets="NO" id="Okd-Fa-vOv" customClass="SendMessagesViewController" customModule="ShowMessagesDate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendMessagesViewController" automaticallyAdjustsScrollViewInsets="NO" id="Okd-Fa-vOv" customClass="ShowMessagesViewController" customModule="ShowMessagesDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="isj-bZ-pFS"/>
                         <viewControllerLayoutGuide type="bottom" id="FVP-lQ-1qk"/>
@@ -41,24 +41,30 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Other Messages" rowHeight="34" id="Jqt-Q0-Vnv" userLabel="Recived Messages Table View Cell" customClass="MessageTableViewCell" customModule="ShowMessagesDate" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recivedMessageCell" rowHeight="34" id="Jqt-Q0-Vnv" userLabel="Recived Messages Table View Cell" customClass="MessageTableViewCell" customModule="ShowMessagesDate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="320" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jqt-Q0-Vnv" id="QCQ-ed-wS1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-rO-ch9" userLabel="Message Body" customClass="MessagesLabel" customModule="ShowMessagesDate" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="6" width="42" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-rO-ch9" userLabel="Message Body" customClass="MessagesLabel" customModule="ShowMessagesDate" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="6" width="45" height="22"/>
                                                     <animations/>
+                                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="SKt-uo-tuq"/>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="SPH-XF-YR3"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="SKt-uo-tuq"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="SPH-XF-YR3"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="vgo-Pj-vYO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="vgo-Pj-vYO"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Elo-b5-ri8" userLabel="Message Time">
                                                     <rect key="frame" x="262" y="6" width="42" height="22"/>
@@ -66,8 +72,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="OkB-5J-egf"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -84,34 +90,35 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="messageBodyLabel" destination="oaL-rO-ch9" id="HKX-9O-y0S"/>
                                             <outlet property="messageContentLabel" destination="oaL-rO-ch9" id="6WT-Sg-cko"/>
                                             <outlet property="messageTimeLabel" destination="Elo-b5-ri8" id="xZZ-jU-iO5"/>
                                             <outlet property="messageTimeTrailingConstraint" destination="GRc-O5-2IX" id="UZY-Ap-PqS"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Messages" rowHeight="34" id="zZ3-dj-bnW" userLabel="My Messages Table View Cell" customClass="MessageTableViewCell" customModule="ShowMessagesDate" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sendMessageCell" rowHeight="34" id="zZ3-dj-bnW" userLabel="My Messages Table View Cell" customClass="MessageTableViewCell" customModule="ShowMessagesDate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="320" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zZ3-dj-bnW" id="ANU-fu-UUL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-7F-pmW" userLabel="Message Body" customClass="MessagesLabel" customModule="ShowMessagesDate" customModuleProvider="target">
-                                                    <rect key="frame" x="212" y="6" width="42" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-7F-pmW" userLabel="Message Body" customClass="MessagesLabel" customModule="ShowMessagesDate" customModuleProvider="target">
+                                                    <rect key="frame" x="209" y="6" width="45" height="22"/>
                                                     <animations/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.90858861019736847" blue="0.35512952902631578" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="73Q-ly-Zo5"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="EmG-nU-AyI"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="EmG-nU-AyI"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="I21-Cy-XMP"/>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="uDf-g8-gLu"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="uDf-g8-gLu"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="73Q-ly-Zo5"/>
+                                                            <exclude reference="I21-Cy-XMP"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
@@ -121,8 +128,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="zS0-50-8rG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -138,7 +145,6 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="messageBodyLabel" destination="ahC-7F-pmW" id="PNF-kJ-eM2"/>
                                             <outlet property="messageContentLabel" destination="ahC-7F-pmW" id="yOC-qd-oBN"/>
                                             <outlet property="messageTimeLabel" destination="qFS-bf-Oca" id="iEf-SC-umK"/>
                                             <outlet property="messageTimeTrailingConstraint" destination="zWQ-S4-VC3" id="3xk-wY-pGi"/>
@@ -148,7 +154,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="Okd-Fa-vOv" id="w5z-B8-MLZ"/>
                                     <outlet property="delegate" destination="Okd-Fa-vOv" id="h4M-dt-Akg"/>
-                                    <outletCollection property="gestureRecognizers" destination="60N-JG-tcg" appends="YES" id="ujv-n3-hfa"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -162,20 +167,17 @@
                             <constraint firstAttribute="trailing" secondItem="DKV-CL-BiN" secondAttribute="trailing" id="ley-a5-Xde"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tiQ-4d-nrM"/>
+                    <navigationItem key="navigationItem" title="Joeny" id="tiQ-4d-nrM">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Messages" id="JS4-MV-fmA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Details" id="yE4-Or-gzJ"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="messagesTableView" destination="DKV-CL-BiN" id="reX-59-jYT"/>
-                        <outlet property="panGesture" destination="60N-JG-tcg" id="IWU-uL-m93"/>
+                        <outlet property="messagesTableView" destination="DKV-CL-BiN" id="LGE-pi-eBj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nl0-rc-Gxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="60N-JG-tcg">
-                    <connections>
-                        <outlet property="delegate" destination="Okd-Fa-vOv" id="8xS-IM-Qcl"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="873" y="315"/>
         </scene>
